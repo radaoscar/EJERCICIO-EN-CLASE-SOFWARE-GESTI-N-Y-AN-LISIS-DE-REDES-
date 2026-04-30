@@ -145,6 +145,39 @@ netassist/
 │── netassist.html
 │── README.md
 │── assets/ <img width="1845" height="984" alt="imagen" src="https://github.com/user-attachments/assets/a4f4f840-fbec-497b-a063-0949c5229545" />
+La imagen muestra un dashboard de monitoreo de red en tiempo real. Este panel permite supervisar el estado y rendimiento de varios dispositivos de red.
+
+Información principal:
+Disponibilidad: 100% → todos los hosts monitoreados están activos.
+Latencia media: 35.5 ms → tiempo promedio de respuesta de la red.
+Pérdida: 0.29% → porcentaje de paquetes perdidos en la comunicación.
+Ancho de banda: 661 Mbps → velocidad total de transferencia de datos.
+Gráfico central:
+
+Se observa una gráfica de:
+
+Latencia (línea azul) medida en milisegundos.
+Ancho de banda (línea celeste) medido en Mbps.
+
+El gráfico muestra cómo cambian ambos valores en tiempo real durante diferentes intervalos de monitoreo.
+
+Tabla inferior:
+
+Lista los dispositivos monitoreados:
+
+core-sw
+edge-rt
+voip-gw
+
+Para cada uno se muestra:
+
+Dirección IP
+Estado
+Latencia
+Pérdida de paquetes
+Consumo de ancho de banda
+
+En general, el dashboard sirve para detectar problemas de rendimiento, congestión o fallos en una infraestructura de red.
 
 
 
