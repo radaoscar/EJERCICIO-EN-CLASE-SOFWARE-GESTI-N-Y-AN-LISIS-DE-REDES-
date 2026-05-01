@@ -1,8 +1,8 @@
 # EJERCICIO-EN-CLASE-SOFWARE-GESTI-N-Y-AN-LISIS-DE-REDES-
 
 
-📡 NetAssist — Asistente de Ingeniero de Redes
-🧾 Descripción del Proyecto
+ NetAssist — Asistente de Ingeniero de Redes
+ Descripción del Proyecto
 
 NetAssist es un prototipo de aplicación web desarrollado como solución al ejercicio de clase, cuyo objetivo es implementar un sistema de gestión, monitoreo y configuración para redes convergentes (voz, video y datos).
 
@@ -16,7 +16,7 @@ Creación de listas de control de acceso (ACLs)
 
 Este proyecto es completamente standalone (HTML + JS) y utiliza datos sintéticos simulados, cumpliendo con lo planteado en el ejercicio .
 
-🎯 Objetivos
+ Objetivos
 Objetivo General
 
 Desarrollar una aplicación modular tipo asistente de red capaz de analizar, visualizar y generar configuraciones para redes convergentes.
@@ -28,21 +28,21 @@ Analizar métricas de QoS (latencia, jitter, pérdida, MOS)
 Implementar VLAN Voice con CoS/DSCP
 Crear ACLs estándar y extendidas
 Simular tráfico de red
-🏗️ Arquitectura del Sistema
+ Arquitectura del Sistema
 
 El sistema está compuesto por módulos independientes:
 
-🔹 1. Dashboards de Red
+ 1. Dashboards de Red
 Disponibilidad de hosts
 Latencia promedio
 Pérdida de paquetes
 Ancho de banda
 Gráficos dinámicos con Chart.js
 
-✔ Datos simulados cada 1.5 segundos
-✔ Visualización en tiempo real
+ Datos simulados cada 1.5 segundos
+ Visualización en tiempo real
 
-🔹 2. Generador Multi-Vendor
+ 2. Generador Multi-Vendor
 
 Permite generar configuraciones automáticamente para:
 
@@ -60,7 +60,7 @@ Ejemplo generado:
 switchport voice vlan 200
 mls qos trust cos
 auto qos voip cisco-phone
-🔹 3. VLAN Voice
+ 3. VLAN Voice
 
 Configuración automatizada para puertos:
 
@@ -70,10 +70,10 @@ Priorización con:
 CoS
 DSCP
 
-✔ Compatible con ambos vendors
-✔ Generación simultánea de configuraciones
+ Compatible con ambos vendors
+ Generación simultánea de configuraciones
 
-🔹 4. ACLs (Access Control Lists)
+ 4. ACLs (Access Control Lists)
 
 Constructor dinámico de reglas:
 
@@ -87,7 +87,7 @@ Ejemplo:
 
 permit udp 192.168.10.0 192.168.200.0 eq 5060
 deny ip any 192.168.200.0
-🔹 5. Analizador RTP / RTSP
+5. Analizador RTP / RTSP
 
 Simulación de tráfico de voz/video con métricas QoS:
 
@@ -96,51 +96,51 @@ Jitter
 Pérdida
 MOS (Mean Opinion Score)
 
-✔ Implementa modelo E simplificado
-✔ Genera alertas cuando:
+ Implementa modelo E simplificado
+ Genera alertas cuando:
 
 MOS < 3.6 → degradado
 MOS < 2.6 → crítico
-🔹 6. Histórico
+ 6. Histórico
 Almacenamiento en localStorage
 Configuraciones generadas
 Logs de eventos
 Exportación en JSON
-🖥️ Tecnologías Utilizadas
+ Tecnologías Utilizadas
 HTML5
 CSS3 (UI moderna con tema oscuro)
 JavaScript (Vanilla)
 Chart.js (visualización de datos)
 LocalStorage (persistencia)
-⚙️ Funcionamiento Interno
-🔸 Simulación de red
+ Funcionamiento Interno
+ Simulación de red
 
 El sistema genera métricas aleatorias:
 
 Latencia: variación controlada
 Pérdida: basada en estrés
 BW: fluctuación dinámica
-🔸 Cálculo de MOS
+ Cálculo de MOS
 
 Se utiliza una aproximación del modelo E:
 
 Considera delay, jitter y pérdida
 Devuelve valor entre 1 (malo) y 4.5 (excelente)
-📊 Resultados Observados
+ Resultados Observados
 
 Según las pruebas visuales:
 
-✔ Disponibilidad: 100%
-✔ Latencia promedio: ~35 ms
-✔ Pérdida: ~0.29%
-✔ Ancho de banda: ~600–700 Mbps
+ Disponibilidad: 100%
+ Latencia promedio: ~35 ms
+ Pérdida: ~0.29%
+ Ancho de banda: ~600–700 Mbps
 
 El sistema muestra estados:
 
-🟢 UP
-🟡 DEG (degradado)
-🔴 DOWN
-📁 Estructura del Proyecto
+ UP
+ DEG (degradado)
+ DOWN
+ Estructura del Proyecto
 netassist/
 │── netassist.html
 │── README.md
@@ -200,7 +200,7 @@ Guardar Cisco / Huawei → almacena los comandos generados
 
 En la parte inferior se mostrarán los resultados para Cisco IOS y Huawei VRP.
 
-👉 En resumen, esta pantalla sirve para generar y guardar configuraciones de red compatibles con múltiples fabricantes.
+ En resumen, esta pantalla sirve para generar y guardar configuraciones de red compatibles con múltiples fabricantes.
 
 
 
@@ -216,7 +216,7 @@ Prioridades de tráfico (CoS 5 y DSCP 46)
 
 Al hacer clic en “Generar Cisco + Huawei”, el sistema crea automáticamente los comandos de configuración para ambos fabricantes (Cisco IOS y Huawei VRP).
 
-👉 En resumen, esta sección permite configurar VLAN de voz con calidad de servicio (QoS) y obtener configuraciones listas para usar en equipos de red.
+ En resumen, esta sección permite configurar VLAN de voz con calidad de servicio (QoS) y obtener configuraciones listas para usar en equipos de red.
 
 
 <img width="1759" height="1034" alt="imagen (3)" src="https://github.com/user-attachments/assets/0a83592e-2c3d-4f03-8945-8e8c376ebe76" />
@@ -239,7 +239,7 @@ VLAN Voice
 QoS para priorizar voz
 Políticas de tráfico
 
-👉 En resumen, esta pantalla permite configurar tráfico de voz y obtener los comandos listos para aplicar en equipos de red.
+ En resumen, esta pantalla permite configurar tráfico de voz y obtener los comandos listos para aplicar en equipos de red.
 
 
 <img width="1705" height="985" alt="imagen (4)" src="https://github.com/user-attachments/assets/0cf171e0-0a07-4a9c-9d3c-5082ace5e205" />
@@ -287,11 +287,11 @@ Log de eventos: un registro de las últimas acciones del sistema, como la creaci
 
 En resumen, es la sección donde se almacenan y visualizan las actividades realizadas dentro del sistema.
 
-🚀 Cómo Ejecutar
+ Cómo Ejecutar
 Descargar el archivo netassist.html
 Abrir en cualquier navegador moderno
 No requiere instalación ni backend
-🧠 Conclusiones
+ Conclusiones
 Se logró implementar un sistema modular completo según el enunciado
 Se simulan correctamente métricas de red en tiempo real
 La generación multi-vendor automatiza tareas reales de networking
@@ -299,7 +299,7 @@ El proyecto es escalable y puede evolucionar a:
 Backend real (Python/Node.js)
 Integración con dispositivos reales (SNMP, NetFlow)
 Base de datos persistente
-🔮 Mejoras Futuras
+ Mejoras Futuras
 Integración con APIs reales de red
 Autenticación de usuarios
 Exportación de configuraciones a dispositivos
